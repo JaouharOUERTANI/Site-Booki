@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    max-width: 1440px;
 }
 
 :root {
@@ -12,9 +13,10 @@
 
 #mainContainer{
     border: 2px solid red;
-    (min-width: 1024px) and (max-width: 1440px);
-    height: auto;
-    padding: 50px;
+    width: 1440px;    
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 /* TAILLE DES POLICES */
@@ -54,7 +56,6 @@
     font-weight: 400;
 }
 
-
 .color-bleu {
     color: #0065fc;
 }
@@ -65,6 +66,10 @@
   
 .color-gris {
     color: #f2f2f2;
+}
+
+.color-black{
+    color: black;
 }
   
 .back-bleu {
@@ -93,6 +98,10 @@
   
 .texte-gras {
     font-weight: bold;
+}
+
+.euro{
+    font-weight: bolder;
 }
 
 .flex-centre {
@@ -173,6 +182,11 @@
     margin-top: 50px;
 }
 
+.logoNav {
+    display: flex;
+    flex-direction: row-reverse;    
+}
+
 .barreNav {
     border-top: 1px solid transparent;
 }
@@ -189,6 +203,10 @@
 .blocLogo{
     border: 2px solid red;
     width: 100%;
+}
+
+.margeLogo{
+    margin-top: 30px;
 }
 
 .titre{
@@ -259,32 +277,40 @@
     margin-bottom: 40px;
   }
 
-#filtre{
+.filtre{
     border: 2px solid yellow;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 50px;
+    gap: 20px;
+}
+
+.filtreTexte{
+    margin-right: 15px;
 }
 
 .filtreBloc1{
-    width: 35%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .filtreBloc2{
-    width: 35%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .blocTexteIcon {
     display: flex;
     align-items: center;
     border: 2px solid #f2f2f2;
-    width: 100%;
     height: 50px;
     border-radius: 30px;
 
@@ -306,7 +332,7 @@
 
 /* INFO */
 
-#info{
+.info{
     border: 2px solid blue;
     width: 100%;
     display: flex;
@@ -336,13 +362,15 @@
 
 /* Hébergement */
 
-.sizeH2{
-    margin-left: 50px;
+.margeTitre{
+margin-left: 50px;
+margin-top: 30px;
+margin-bottom: 30px;
 }
 
 .hebergements{
     border: 2px solid rgb(0, 217, 255);
-    width: 68%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     border-radius: 3%;
@@ -364,20 +392,21 @@
     flex-direction: column;
     width: 30%;
     border-radius: 20px 20px 20px 20px;
+    padding: 5px;
 }
 
 .cadreHeberg{
     height: 100px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
-    margin: 2px;
+
 }
 
 .cardH-txt{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 60px;
+    height: 70px;
     margin: 10px;
 }
 
@@ -409,19 +438,24 @@
     margin-left: 50px;
 }
 
-.h3Title{
-    font-weight: bolder;
-    margin: 50px;
-}
-
 /* Populaire */
 
 .populaires{
     border: 2px solid rgb(0, 217, 255);
-    width: 28%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     border-radius: 3%;
+}
+
+.titreIcon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.margeIcon{
+    margin-left: 90px;
 }
 
 .bloc3cartes{
@@ -429,29 +463,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 85%;
+    height: 80%;
 }
             
-.cardPop{
+.cardPop {
     width: 80%;
-    height: 30%;
+    height: 27%;
     display: flex;
     flex-direction: row;
-    border-radius: 10%;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .cadrePop{
-    width: 80px;
+    width: 100px;
     object-fit: cover;
     border-radius: 15% 0 0 15%;
-    margin: 2px;
 }
 
 .cardPop-content{
     width: 100%;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
+}
+
+.margeH6{
+    height: 20%;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.margeSt{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.margeSt2{
+    margin-top: 20px;
+}
+
+.cardPopRating{
+    margin-top: 45px;
+}
+
+.cardPopRating2{
+    margin-top: 22px;
+}
+
+.cardPop-rating{
+    margin-top: 50px;
 }
 
 /* Activités */
@@ -476,7 +537,7 @@
 }
 
 .cardAct-content{
-    width: 20%;
+    width: 18%;
     height: 85%;
     display: flex;
     flex-direction: column;
@@ -525,13 +586,8 @@
 }
 
 /* MEDIA QUERIE */
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-    #mainContainer{
-        max-width: 1024px;
-        margin: 0 auto;
-    }
-}
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     /* styles spécifiques pour les écrans d'une largeur minimale de 769px et maximale de 1024px */
     
     .sizeH1{
@@ -570,6 +626,15 @@
     }
 
 #mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
     margin: 0 auto;
 }    
 
@@ -577,28 +642,43 @@
     width: 100%;
 }
 
-.filtreEnsemble{
+#filtre{
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sizeH4{
+    width: 100%;
 }
 
 .filtreBloc1{
-    width: 50%;
+    width: 48%;
 }
 
 .filtreBloc2{
-    width: 50%;
+    width: 48%;
 }
 
 #hebergementsPopulaires{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 30px;
 }
 
 .hebergements{
     width: 100%;
+}
+
+.bloc1{
+    margin-left: 30px;
+}
+
+.bloc2{
+    margin-left: 30px;
 }
 
 .populaires{
@@ -607,14 +687,29 @@
     flex-direction: column;
 }
 
+.margeTitre{
+    margin-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.titreIcon{
+    justify-content: space-between;
+}
+
+.margeIcon{
+    margin-right: 25px;
+}
+
 .bloc3cartes{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 94%;
     height: 150px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .cardPop{
@@ -622,14 +717,58 @@
     height: 80%;
 }
 
+.cadrePop{
+    width: 30%;
+}
+
+.margeH6{
+    line-height: 19px;
+}
+
+.margeSt{
+    line-height: 16px;
+    margin-top: 20px;
+}
+
+.cardPop-rating{
+    margin-top: 30px;
+}
+
+
 #activites{
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.margeTab{
+    margin-left: 10px;
+}
+
+.cardAct{
     width: 100%;
+    height: 270px;
+    margin-top: 0;
+}
+
+.cardAct-content{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cadre{
+    height: 70%;
+}
+
+.cardAct-title{
+    height: 19px;
 }
 
 .footer{
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    width: 145%;
     margin: auto;
 }
 
@@ -638,34 +777,163 @@
 }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
     /* styles spécifiques pour les écrans d'une largeur maximale de 768px */
-  
-#mainContainer{
-    margin: 0 auto;
-    height: auto;
-}  
 
-.sizeH2{
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    gap: 35px;
+    width: 320px;
+    height: 3982.52px;
     margin: 0 auto;
 }
 
-.filtreEnsemble{
+#mainContainer{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}  
+
+.sizeH1{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sizeH2{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sizeH3{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sizeH4{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sizeH5{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sizeH6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sizeSousTitre{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.logoNav{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 115px;
+}
+
+.blocNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    width: 90%;
+    height: 19px;
+}
+
+.nav1{
+    width: 35%;
+    height: 19px;
+    padding: 0;
+}
+
+.nav2{
+    width: 35%;
+    height: 19px;
+    padding: 0;
+}
+
+.barreNav {
+    border-bottom: 1px solid transparent;
+}
+  
+.barreNav:hover {
+    border-bottom: 1px solid #0065fc;
+    cursor: pointer;
+}
+  
+.barreNav:hover > a {
+    color: #0065fc;
+}
+
+.blocLogo{
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+    width: 121.09px;
+    height: 79px;
+}
+
+.mobileH1{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.mobile{
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .H4Mobile{
-    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
-.filtreBloc1{
-    width: 100%;
+.flexMobile{
+    display: flex;
+    flex-direction: column;
 }
 
-.filtreBloc2{
+.barreDeRecherche{
     width: 100%;
+    height: 35px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: 25px;
+}
+
+.tailleMobile{
+    height: 35px;
+}
+
+.tailleIcon{
+    width: 35px;
+}
+
+#filtre{
+    margin-top: 20px;
+}
+
+.blocTexteIcon{
+    width: 140px;
+    height: 40px;
+}
+
+#info{
+    margin-top: 20px;
 }
 
 #hebergementsPopulaires{
@@ -674,37 +942,71 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.margeMobile{
+    margin: 20px;
 }
 
 .bloc3cartes{
-    width: auto;
+    width: 100%;
     height: auto;
+    gap: 20px;
+}
 
+.cardPop{
+    width: 80%;
+    height: 110px;
+}
+
+.populaires{
+    width: 100%;
+    padding-bottom: 30px;
 }
 
 .hebergements{
-    height: 2000px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 40px;
+    gap: 20px;
+}
+
+.cardH{
+    width: 90%;
+    height: 180px;
 }
 
 .bloc1{
-    height: 800px;
+    width: 95%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
 }
 
 .bloc2{
-    height: 800px;
+    width: 95%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.cardH{
+    width: 95%;
+}
+
+.mobileP{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
 }
 
 #activites{
@@ -713,33 +1015,49 @@
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.margeMobile{
-    margin-top: 40px;
-    margin-bottom: 40px;
+.mobileAct{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .cardAct{
-    width: 100%;
-    height: 1000px;
-}
-
-.cadre{
-    width: 80%;
-    height: 90px;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
 }
 
 .cardAct-content{
-    width: 80%;
-    height: 120px;
+    width: 100%;
+    height: 180px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.cadre{
+    width: 100%;
+    height: 141px;
+}
+
+.cardAct-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .footer{
     flex-direction: column;
     width: 100%;
     margin-top: 40px;
+}
+
+.blocFoot{
+    width: 100%;
 }
 
 }
