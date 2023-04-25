@@ -1,7 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    max-width: 1440px;
+    
 }
 
 :root {
@@ -11,8 +11,17 @@
     margin: auto;
 }
 
+body{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
 #mainContainer{
-    width: 1440px;    
+    max-width: 1440px;    
     padding: 0 50px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -149,7 +158,7 @@
 }
 
 .blocNav{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -221,6 +230,7 @@
     display: flex;
     align-items: center;
     margin-top: 50px;
+    border-radius:15px 2px solid #f2f2f2;   
 }
 
 .padding-search {
@@ -312,7 +322,7 @@
 }
   
 .blocTexteIcon:hover {
-    background-color: #f2f2f2;
+    background-color: #DEEBFF;
 }
 
 
@@ -378,6 +388,13 @@ margin-bottom: 30px;
     padding: 5px;
 }
 
+.artHebergement{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 20px 20px 20px 20px;
+}
+
 .cadreHeberg{
     height: 100px;
     border-radius: 20px 20px 0 0;
@@ -436,8 +453,12 @@ margin-bottom: 30px;
     align-items: center;
 }
 
+.margePop{
+    margin-left: 20px;
+}
+
 .margeIcon{
-    margin-left: 90px;
+    margin-left: 150px;
 }
 
 .bloc3cartes{
@@ -446,15 +467,20 @@ margin-bottom: 30px;
     align-items: center;
     justify-content: space-between;
     height: 80%;
+    gap: 20px;
 }
             
 .cardPop {
-    width: 80%;
-    height: 27%;
+    width: 90%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.artPop {
+    width: 100%;
     display: flex;
     flex-direction: row;
     border-radius: 20px;
-    padding: 5px;
 }
 
 .cadrePop{
@@ -507,6 +533,10 @@ margin-bottom: 30px;
     margin-top: 30px;
 }
 
+.card{
+    width: 20%;
+}
+
 .cardAct{
     width: 100%;
     height: 450px;
@@ -518,7 +548,7 @@ margin-bottom: 30px;
 }
 
 .cardAct-content{
-    width: 18%;
+    width: 100%;
     height: 85%;
     display: flex;
     flex-direction: column;
@@ -607,6 +637,7 @@ margin-bottom: 30px;
     }
 
 #mainContainer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -641,6 +672,10 @@ margin-bottom: 30px;
 
 .filtreBloc2{
     width: 48%;
+}
+
+.blocTexteIcon{
+    width: 160px;
 }
 
 #hebergementsPopulaires{
@@ -725,6 +760,10 @@ margin-bottom: 30px;
     margin-left: 10px;
 }
 
+.card{
+    width: 100%;
+}
+
 .cardAct{
     width: 100%;
     height: 270px;
@@ -764,12 +803,9 @@ margin-bottom: 30px;
 body{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 5px;
-    gap: 35px;
-    width: 320px;
-    height: 3982.52px;
-    margin: 0 auto;
+    width: 100%;
+    height: 3887.52px;
+    overflow-x: hidden;
 }
 
 #mainContainer{
@@ -885,6 +921,7 @@ body{
 .flexMobile{
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 .barreDeRecherche{
@@ -894,6 +931,11 @@ body{
     align-self: stretch;
     flex-grow: 0;
     margin-top: 25px;
+}
+
+.recherche{
+    font-size: 14px;
+    border: 2px solid #f2f2f2;
 }
 
 .tailleMobile{
@@ -923,7 +965,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 106%;
     margin-top: 20px;
 }
 
@@ -938,7 +980,7 @@ body{
 }
 
 .cardPop{
-    width: 80%;
+    width: 90%;
     height: 110px;
 }
 
@@ -987,25 +1029,32 @@ body{
 .mobileP{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 #activites{
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-left: 10px;
 }
 
 .mobileAct{
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.card{
+    width: 100%;
 }
 
 .cardAct{
-    width: 90%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1033,8 +1082,9 @@ body{
 
 .footer{
     flex-direction: column;
-    width: 100%;
+    width: 110%;
     margin-top: 40px;
+    padding: 0;
 }
 
 .blocFoot{
